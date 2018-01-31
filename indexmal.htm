@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Page Title</title>
+<!-- Handlebars js -->
+		<script src="handlebars/handlebars.runtime-v4.0.11.js"></script>	
+		<script src="js/one.js"></script>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/fontawesome/fontawesome-all.css">
+
+		<script src="lib/bootstrap/jquery-3.2.1.min.js"></script>	
+				
+	</head>
+	<body>	
+				
+		
+		<script data-main="js/main.js" src="js/require.js"></script>
+		<div id="handlebars"></div>
+		
+			
+		<button type='button' data-toggle='modal' data-target='#modaluser' id='#modaluserbutton'> <i class="fas fa-plus-circle"></i></button>
+	<div class="modal fade" id='modaluser' role='dialog' aria-labelledby="modalusertitle" aria-hidden='true'>
+		<div class="modal-dialog" role='document'>
+			<div class="modal-content">
+				<div class="modal-header"><h5 class="modal-title" id='modalusertitle'>Crear Usuario</h5></div>
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<form method="POST" action="#" role="form">							
+							<div class="form-group">
+								<label class="control-label" for="newnombres">Nombres</label>
+								<input id="newnombres" type="text" maxlength="50" class="form-control">
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="newciudad">Ciudad</label>
+								<input id="newciudad" type="text" maxlength="50" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>
+									<input type="radio" name="sexo"> Masculino
+								</label>
+								<label>
+									<input type="radio" name="sexo"> Femenino
+								</label>
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="newtelefono">Telefono</label>
+								<input id="newtelefono" type="text" maxlength="25" class="form-control" length="40">
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="newfecha">Fecha de nacimiento</label>
+								<input id="newfecha" type="password" maxlength="25" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="submit" id="okcreateuser" value="Enviar">
+								<input type="reset" id='canceluser' value='Cancelar'>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+		<!-- Optional JavaScript -->
+		<script src="js/all.js">				
+		</script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		
+		<!-- <script src="lib/bootstrap/popper.js"></script>	 -->
+		
+	</body>
+</html>

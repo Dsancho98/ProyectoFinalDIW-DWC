@@ -1,0 +1,29 @@
+<div class="form-group">
+	<input id="idoculta" type="text" maxlength="50" class="form-control" value='{{id}}' hidden>
+	<label class="control-label" for="newnombres"><b>Nombre </b></label>
+	<input id="newnombres" type="text" maxlength="50" class="form-control" value='{{nombres}}'>
+</div>
+<div class="form-group">
+	<label class="control-label" for="newciudad"><b>Ciudad</b></label>
+	<input id="newciudad"' type="text" maxlength="50" class="form-control" value='{{ciudad}}'>
+</div>
+	<div class="form-group">
+	<label>
+		<input type="radio" name="alternativas" value="M" {{seleccionarSexo sexo "M"}}> <b>Masculino</b>
+	</label>
+	<label>
+		<input type="radio" name="alternativas" value="F" {{seleccionarSexo sexo "F"}}> <b>Femenino</b>
+	</label>
+</div>
+<div class="form-group">
+	<label class="control-label" for="newtelefono"><b>Telefono</b></label>
+	<input id="newtelefono" type="text" maxlength="25" class="form-control" length="40" value='{{telefono}}'>
+</div>
+<div class="form-group">
+	<label class="control-label" for="newfecha"><b>Fecha de nacimiento</b></label>
+	<input id="newfecha" type="text" maxlength="25" class="form-control" value='{{convertirFecha fecha_nacimiento}}'>
+</div>
+<div class="form-group">
+	<button type='button' id="okmodifyuser" value="submit">Modificar</button>
+	<input type="reset" id='canceluser' value='Cancelar'>
+</div>

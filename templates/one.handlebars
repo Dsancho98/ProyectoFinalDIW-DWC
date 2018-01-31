@@ -1,0 +1,31 @@
+<div class="container">
+<button type='button' data-toggle='modal' data-target='#modaluser' id='modaluserbutton'> <i class="fas fa-plus-circle"></i></button>
+	<table class="table table-responsive" id='table'>
+	  <thead class="thead-dark">
+	    <tr>		      
+	      <th>NOMBRES</th>
+	      <th>CIUDAD</th>
+	      <th>SEXO</th>
+	      <th>TELEFONO</th>
+	      <th>FECHA DE NACIMIENTO</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		{{#each this}}
+		{{#if this}}
+		<tr>			
+			<td>{{this.nombres}}</td>
+			<td>{{this.ciudad}}</td>
+			<td>{{this.sexo}}</td>
+			<td>{{this.telefono}}</td>
+			<td>{{convertirFecha this.fecha_nacimiento}}</td>	      
+			<td> <i class="fas fa-edit btn editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i></td>
+			<td><i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i></td>			
+		</tr>
+		{{/if}}	
+		{{/each}}	    
+ 	  </tbody>		  		
+	</table>
+</div>
