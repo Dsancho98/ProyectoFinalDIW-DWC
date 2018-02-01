@@ -1,7 +1,7 @@
 eventos = events.getInstance();
 // $.post(URL,data,callback);
 var clientelist = (function() {
-    var api = "localhost/Tarde/DWC/API";
+    var api = "localhost/Tarde/DWC/ProyectoFinalAdds/API";
     clientesarr = new Array();
     $.post("http://" + api + "/consulta.php", function(data) {        
         for (ajax in data) {
@@ -14,7 +14,7 @@ var clientelist = (function() {
     },"json");
     function addNewCliente(objeto){        
         $.post("http://" + api + "/nuevo.php",objeto,function(contenido){           
-            obj= { id:contenido.id, nombres: contenido.nombres, ciudad: contenido.ciudad, sexo: contenido.sexo, telefono: contenido.telefono, fechaNacimiento: contenido.fechaNacimiento};
+            obj= { id:contenido.id, nombres: contenido.nombres, ciudad: contenido.ciudad, sexo: contenido.sexo, telefono: contenido.telefono, fechaNacimiento: contenido.fechaNacimiento,direccion: contenido.direccion, provincia: contenido.provincia, fecha_alta: contenido.fecha_alta};
             addToArray(obj);
             eventos.publish('mostrarclientes');            
         },"json");        
@@ -27,7 +27,7 @@ var clientelist = (function() {
     }
     function modCliente(objeto){        
         $.post("http://" + api + "/actualizar.php",objeto,function(contenido){           
-            obj= { id:contenido.id, nombres: contenido.nombres, ciudad: contenido.ciudad, sexo: contenido.sexo, telefono: contenido.telefono, fechaNacimiento: contenido.fechaNacimiento};
+            obj= { id:contenido.id, nombres: contenido.nombres, ciudad: contenido.ciudad, sexo: contenido.sexo, telefono: contenido.telefono, fechaNacimiento: contenido.fechaNacimiento,direccion: contenido.direccion, provincia: contenido.provincia, fecha_alta: contenido.fecha_alta};
             addToArray(obj);
             eventos.publish('mostrarclientes');            
         },"json");        

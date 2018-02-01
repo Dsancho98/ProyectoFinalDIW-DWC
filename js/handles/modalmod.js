@@ -17,6 +17,12 @@ templates['modalmod'] = template({"compiler":[7,">= 4.0.0"],"main":function(cont
     + alias4(((helper = (helper = helpers.telefono || (depth0 != null ? depth0.telefono : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"telefono","hash":{},"data":data}) : helper)))
     + "'>\r\n</div>\r\n<div class=\"form-group\">\r\n	<label class=\"control-label\" for=\"newfecha\"><b>Fecha de nacimiento</b></label>\r\n	<input id=\"newfecha\" type=\"text\" maxlength=\"25\" class=\"form-control\" value='"
     + alias4((helpers.convertirFecha || (depth0 && depth0.convertirFecha) || alias2).call(alias1,(depth0 != null ? depth0.fecha_nacimiento : depth0),{"name":"convertirFecha","hash":{},"data":data}))
-    + "'>\r\n</div>\r\n<div class=\"form-group\">\r\n	<button type='button' id=\"okmodifyuser\" value=\"submit\">Modificar</button>\r\n	<input type=\"reset\" id='canceluser' value='Cancelar'>\r\n</div>\r\n";
+    + "'>\r\n</div>\r\n<div class=\"form-group\">\r\n	<label class=\"control-label\" for=\"newdireccion\"><b>Direccion</b></label>\r\n	<input id=\"newdireccion\" type=\"text\" maxlength=\"25\" class=\"form-control\" value='"
+    + alias4(((helper = (helper = helpers.direccion || (depth0 != null ? depth0.direccion : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"direccion","hash":{},"data":data}) : helper)))
+    + "'>\r\n</div>\r\n<div class=\"form-group\">\r\n	<label class=\"control-label\" for=\"newprovincia\"><b>Provincia</b></label>\r\n	<input id=\"newprovincia\" type=\"text\" maxlength=\"25\" class=\"form-control\" value='"
+    + alias4(((helper = (helper = helpers.provincia || (depth0 != null ? depth0.provincia : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"provincia","hash":{},"data":data}) : helper)))
+    + "'>\r\n</div>\r\n<div class=\"form-group\">	\r\n	<input id=\"newfechaalta\" type=\"text\" maxlength=\"25\" class=\"form-control\" value='"
+    + alias4(((helper = (helper = helpers.fecha_alta || (depth0 != null ? depth0.fecha_alta : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"fecha_alta","hash":{},"data":data}) : helper)))
+    + "' hidden>\r\n</div>\r\n<div class=\"form-group\">\r\n	<button type='button' id=\"okmodifyuser\" value=\"submit\">Modificar</button>\r\n	<input type=\"reset\" id='canceluser' value='Cancelar'>\r\n</div>\r\n";
 },"useData":true});
 })();

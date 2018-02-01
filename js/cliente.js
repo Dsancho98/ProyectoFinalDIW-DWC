@@ -6,7 +6,10 @@
 		        ciudad: ajax.ciudad,
 		        sexo: ajax.sexo,
 		        telefono: ajax.telefono,
-		        fecha_nacimiento: ajax.fechaNacimiento
+		        fecha_nacimiento: ajax.fechaNacimiento,
+		        direccion: ajax.direccion,
+		        provincia: ajax.provincia,
+		        fecha_alta: ajax.fecha_alta
 		    }
 		}
 		return{

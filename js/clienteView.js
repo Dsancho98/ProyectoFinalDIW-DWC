@@ -40,11 +40,27 @@ function recogerValores(mode='new'){
 	tlf = $("#newtelefono").val();
 	fecha = $("#newfecha").val();
 	fecha=fecha.split("/").reverse().join("-")+" 00:00:00";
+	direccion=$("#newdireccion").val();
+	provincia=$("#newprovincia").val();	
 	if(mode=='mod'){
 		id=$("#idoculta").val();
-		var objeto = { cliente_id:id,nombres: nombre, ciudad: ciudad, alternativas: sexo, telefono: tlf, fecha_nacimiento: fecha, submit:true};	
+		fechaalta=$("#newfechaalta").val();
+		var objeto = { cliente_id:id,nombres: nombre, ciudad: ciudad, alternativas: sexo, telefono: tlf, fecha_nacimiento: fecha, direccion: direccion, provincia: provincia, fecha_alta: fechaalta, submit:true};	
 	}else{
-		var objeto = { nombres: nombre, ciudad: ciudad, alternativas: sexo, telefono: tlf, fecha_nacimiento: fecha, submit:true};
+		fechaalta=new Date();
+		anyo=fechaalta.getFullYear();
+		mes=fechaalta.getMonth()+1;
+		dia=fechaalta.getDate();
+		horas=fechaalta.getHours();
+		minutos=fechaalta.getMinutes();
+		segundos=fechaalta.getSeconds();
+		dia=(dia < 10 ? '0' : '') + dia;
+		mes=(mes < 10 ? '0' : '') + mes;
+		horas=(horas < 10 ? '0' : '') + horas;
+		minutos=(minutos < 10 ? '0' : '') + minutos;
+		segundos=(segundos < 10 ? '0' : '') + segundos;
+		fechaalta=anyo+"/"+mes+"/"+dia+" "+horas+":"+minutos+":"+segundos;		
+		var objeto = { nombres: nombre, ciudad: ciudad, alternativas: sexo, telefono: tlf, fecha_nacimiento: fecha, direccion: direccion, provincia: provincia, fecha_alta: fechaalta, submit:true};	
 	}
 	
 	return objeto;

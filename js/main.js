@@ -1,18 +1,6 @@
 clientelistview.init();
 clienteview.init();
-eventos = events.getInstance();
-
-$("#nuevocliente").click(function() {
-    id = $("#id").val();
-    nombre = $("#nombre").val();
-    ciudad = $("#ciudad").val();
-    sexo = $("#sexo").val();
-    tlf = $("#tlf").val();
-    fecha = $("#fecha").val();
-    var objeto = { id: id, nombres: nombre, ciudad: ciudad, sexo: sexo, telefono: tlf, fechaNacimiento: fecha };
-    clientelist.addToArray(objeto);
-});
-           
+eventos = events.getInstance();     
   		
 Handlebars.registerHelper('convertirFecha', function(fecha) {
     if(fecha){

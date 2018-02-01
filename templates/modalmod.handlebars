@@ -24,6 +24,17 @@
 	<input id="newfecha" type="text" maxlength="25" class="form-control" value='{{convertirFecha fecha_nacimiento}}'>
 </div>
 <div class="form-group">
+	<label class="control-label" for="newdireccion"><b>Direccion</b></label>
+	<input id="newdireccion" type="text" maxlength="25" class="form-control" value='{{direccion}}'>
+</div>
+<div class="form-group">
+	<label class="control-label" for="newprovincia"><b>Provincia</b></label>
+	<input id="newprovincia" type="text" maxlength="25" class="form-control" value='{{provincia}}'>
+</div>
+<div class="form-group">	
+	<input id="newfechaalta" type="text" maxlength="25" class="form-control" value='{{fecha_alta}}' hidden>
+</div>
+<div class="form-group">
 	<button type='button' id="okmodifyuser" value="submit">Modificar</button>
 	<input type="reset" id='canceluser' value='Cancelar'>
 </div>

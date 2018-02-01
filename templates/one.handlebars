@@ -8,6 +8,9 @@
 	      <th>SEXO</th>
 	      <th>TELEFONO</th>
 	      <th>FECHA DE NACIMIENTO</th>
+		  <th>DIRECCION</th>
+	      <th>PROVINCIA</th>
+	      <th>FECHA DE ALTA</th>      
 	      <th></th>
 	      <th></th>
 	    </tr>
@@ -20,7 +23,10 @@
 			<td>{{this.ciudad}}</td>
 			<td>{{this.sexo}}</td>
 			<td>{{this.telefono}}</td>
-			<td>{{convertirFecha this.fecha_nacimiento}}</td>	      
+			<td>{{convertirFecha this.fecha_nacimiento}}</td>
+			<td>{{direccion}}</td>	
+			<td>{{provincia}}</td>	
+			<td>{{convertirFecha fecha_alta}}</td>     
 			<td> <i class="fas fa-edit btn editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i></td>
 			<td><i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i></td>			
 		</tr>
