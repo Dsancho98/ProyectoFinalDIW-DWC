@@ -12,17 +12,22 @@ var clientelistview = (function() {
     }
 })();
 function botonesModal(){
-	$("#table").on('click','.editarIc',function() {
+	$(".tableview").on('click','.editarIc',function() {
        var numero=$(this).data("id");
        var context={mode:'mod',clientes:clientelist.clientesarr[numero]}
        eventos.publish('cargarmodal',context);
        $("#newfecha").datepicker({ dateFormat: 'dd/mm/yy' });
     });	
-	$("#table").on('click','.borrarIc',function() {
+	$(".tableview").on('click','.borrarIc',function() {
       	var numero=$(this).data("id");
  		var objeto = { id: numero};   
 	    clientelist.removeCliente(objeto);   
     });
+  $(".tableview").on('click','.mapIc',function() {
+      var direccion=$(this).data("id");
+      // direccion=direccion.split(" ").join("%20%");        
+      clientelist.mapCliente(direccion);   
+    });  
     $('#modaluserbutton').click(function(){
     	var context={mode:'new'}
     	eventos.publish('cargarmodal',context);

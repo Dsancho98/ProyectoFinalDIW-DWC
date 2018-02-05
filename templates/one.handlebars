@@ -1,6 +1,6 @@
 <div class="container">
 <button type='button' data-toggle='modal' data-target='#modaluser' id='modaluserbutton'> <i class="fas fa-plus-circle"></i></button>
-	<table class="table table-responsive" id='table'>
+	<table class="table table-responsive d-none d-md-block tableview">
 	  <thead class="thead-dark">
 	    <tr>		      
 	      <th>NOMBRES</th>
@@ -11,11 +11,10 @@
 		  <th>DIRECCION</th>
 	      <th>PROVINCIA</th>
 	      <th>FECHA DE ALTA</th>      
-	      <th></th>
-	      <th></th>
+	      <th></th>	      	      
 	    </tr>
 	  </thead>
-	  <tbody>
+	  <tbody>	  
 		{{#each this}}
 		{{#if this}}
 		<tr>			
@@ -24,14 +23,60 @@
 			<td>{{this.sexo}}</td>
 			<td>{{this.telefono}}</td>
 			<td>{{convertirFecha this.fecha_nacimiento}}</td>
-			<td>{{direccion}}</td>	
-			<td>{{provincia}}</td>	
-			<td>{{convertirFecha fecha_alta}}</td>     
-			<td> <i class="fas fa-edit btn editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i></td>
-			<td><i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i></td>			
+			<td>{{this.direccion}}</td>	
+			<td>{{this.provincia}}</td>	
+			<td>{{convertirFecha this.fecha_alta}}</td>     
+			<td> <i class="fas fa-edit editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i>
+			<i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i>
+			<i class="fas fa-map-marker mapIc" data-toggle='modal' data-target='#modalmap' data-id='{{this.direccion}}'></i></td>		
 		</tr>
 		{{/if}}	
-		{{/each}}	    
- 	  </tbody>		  		
+		{{/each}}	
+
+ 	  </tbody>
 	</table>
+	<table class="table d-md-none tableview">
+	<tbody class="d-md-none">
+			{{#each this}}
+			{{#if this}} 	  		
+			<tr>		      
+		      <th>NOMBRES</th>
+		      <td>{{this.nombres}}</td>
+		    </tr>
+		    <tr>
+		      <th>CIUDAD</th>
+		      <td>{{this.ciudad}}</td>
+		 	</tr>
+		  	<tr>
+		      <th>SEXO</th>
+		      <td>{{this.sexo}}</td>
+		    </tr>
+		    <tr>
+		      <th>TELEFONO</th>
+		      <td>{{this.telefono}}</td>
+		  </tr>
+		  <tr>
+		      <th>FECHA DE NACIMIENTO</th>
+		      <td>{{convertirFecha this.fecha_nacimiento}}</td>
+		  </tr>	
+		  <tr>
+			<th>DIRECCION</th>	
+	      	<td>{{this.direccion}}</td>
+		  </tr>	
+		  <tr>
+		  	<th>PROVINCIA</th>
+			<td>{{this.provincia}}</td>						  
+		  </tr>
+		  <tr>
+		  	<th>FECHA DE ALTA</th> 	
+		  	<td>{{convertirFecha this.fecha_alta}}</td>  
+		  </tr>
+		  <tr>
+			<td> <i class="fas fa-edit editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i>
+			<i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i> <i class="fas fa-map-marker mapIc" data-toggle='modal' data-target='#modalmap' data-id='{{this.direccion}}'></i></td>			  
+		  </tr> 
+		  {{/if}}
+		  {{/each}}
+	  	</tbody> 
+	</table>	  	  	
 </div>

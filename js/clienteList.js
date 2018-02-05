@@ -32,6 +32,13 @@ var clientelist = (function() {
             eventos.publish('mostrarclientes');            
         },"json");        
     }   
+    function mapCliente(direccion){
+        $.post("https://maps.googleapis.com/maps/api/geocode/json?address="+direccion+"&key=AIzaSyBkSOM-8e5xPz-Gw7M7wnG5c-_lfJgoypM&language=es",function(data){
+            resultado={lat: data.results[0].geometry.location.lat, lng:data.results[0].geometry.location.lng};
+            eventos.publish('mostrarmapa',resultado);
+        },"json");
+
+    }
     function addToArray(ajax) {
         clientesarr[ajax.id] = cliente.newcliente(ajax);
     }
@@ -46,6 +53,7 @@ var clientelist = (function() {
         clientesarr: getArray(),
         addCliente: addNewCliente,
         removeCliente: removeCliente,
-        modCliente:modCliente
+        modCliente:modCliente,
+        mapCliente:mapCliente
     }    
 })();

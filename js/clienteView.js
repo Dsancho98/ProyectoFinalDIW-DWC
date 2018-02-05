@@ -10,9 +10,31 @@ var clienteview = (function() {
         $('#modalHandle').html(HTML);
 		 botones();  
     }
+    function mostrarmapa(direccion){    	
+    	// $('#mapCustomer').googleMap({
+    	// 	zoom:8,
+    	// 	coords:[direccion.lat, direccion.lng]
+    	// });document.getElementById('mapCustomer')
+		map = new google.maps.Map($('#mapCustomer')[0], {
+	          center: {lat: direccion.lat, lng: direccion.lng},
+	          zoom: 8
+	        });    
+			var marker = new google.maps.Marker({
+			    position:  {lat: direccion.lat, lng: direccion.lng},
+			    map: map,
+			    title: 'puntero'
+			});   
+			$("#modalmap").on("shown.bs.modal", function () {
+   				google.maps.event.trigger(map, "resize");
+ 			}); 
+		
+    	
+    	      	
+    }
     return {
         init: function() {
             eventos.subscribe('cargarmodal', cargarmodal);
+            eventos.subscribe('mostrarmapa',mostrarmapa);
         }
     }
 })();
