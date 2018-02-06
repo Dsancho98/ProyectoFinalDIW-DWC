@@ -23,13 +23,13 @@ templates['one'] = template({"1":function(container,depth0,helpers,partials,data
     + alias2(alias1((depth0 != null ? depth0.provincia : depth0), depth0))
     + "</td>	\r\n			<td>"
     + alias2((helpers.convertirFecha || (depth0 && depth0.convertirFecha) || alias4).call(alias3,(depth0 != null ? depth0.fecha_alta : depth0),{"name":"convertirFecha","hash":{},"data":data}))
-    + "</td>     \r\n			<td> <i class=\"fas fa-edit editarIc\" data-toggle='modal' data-target='#modaluser' data-id='"
+    + "</td>     \r\n			<td> <a class=\"fas fa-edit editarIc waves-effect waves-light modal-trigger\" href='#modaluser' data-id='"
     + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
-    + "'></i>\r\n			<i class=\"fa fa-window-close borrarIc\" data-id='"
+    + "'></a>\r\n			<i class=\"fa fa-window-close borrarIc\" data-id='"
     + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
-    + "'></i>\r\n			<i class=\"fas fa-map-marker mapIc\" data-toggle='modal' data-target='#modalmap' data-id='"
+    + "'></i> <a class=\"fas fa-map-marker mapIc waves-effect waves-light modal-trigger\" href='#modalmap' data-id='"
     + alias2(alias1((depth0 != null ? depth0.direccion : depth0), depth0))
-    + "'></i></td>		\r\n		</tr>\r\n";
+    + "'></a></td>	\r\n		</tr>\r\n";
 },"4":function(container,depth0,helpers,partials,data) {
     var stack1;
 
@@ -53,19 +53,19 @@ templates['one'] = template({"1":function(container,depth0,helpers,partials,data
     + alias2(alias1((depth0 != null ? depth0.provincia : depth0), depth0))
     + "</td>						  \r\n		  </tr>\r\n		  <tr>\r\n		  	<th>FECHA DE ALTA</th> 	\r\n		  	<td>"
     + alias2((helpers.convertirFecha || (depth0 && depth0.convertirFecha) || alias4).call(alias3,(depth0 != null ? depth0.fecha_alta : depth0),{"name":"convertirFecha","hash":{},"data":data}))
-    + "</td>  \r\n		  </tr>\r\n		  <tr>\r\n			<td> <i class=\"fas fa-edit editarIc\" data-toggle='modal' data-target='#modaluser' data-id='"
+    + "</td>  \r\n		  </tr>\r\n		  <tr>\r\n			<td> <a class=\"fas fa-edit editarIc waves-effect waves-light modal-trigger\" href='#modaluser' data-id='"
     + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
-    + "'></i>\r\n			<i class=\"fa fa-window-close borrarIc\" data-id='"
+    + "'></a>\r\n			<i class=\"fa fa-window-close borrarIc\" data-id='"
     + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
-    + "'></i> <i class=\"fas fa-map-marker mapIc\" data-toggle='modal' data-target='#modalmap' data-id='"
+    + "'></i> <a class=\"fas fa-map-marker mapIc waves-effect waves-light modal-trigger\" href='#modalmap' data-id='"
     + alias2(alias1((depth0 != null ? depth0.direccion : depth0), depth0))
-    + "'></i></td>			  \r\n		  </tr> \r\n";
+    + "'></a></td>			  \r\n		  </tr> \r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
 
-  return "<div class=\"container\">\r\n<button type='button' data-toggle='modal' data-target='#modaluser' id='modaluserbutton'> <i class=\"fas fa-plus-circle\"></i></button>\r\n	<table class=\"table table-responsive d-none d-md-block tableview\">\r\n	  <thead class=\"thead-dark\">\r\n	    <tr>		      \r\n	      <th>NOMBRES</th>\r\n	      <th>CIUDAD</th>\r\n	      <th>SEXO</th>\r\n	      <th>TELEFONO</th>\r\n	      <th>FECHA DE NACIMIENTO</th>\r\n		  <th>DIRECCION</th>\r\n	      <th>PROVINCIA</th>\r\n	      <th>FECHA DE ALTA</th>      \r\n	      <th></th>	      	      \r\n	    </tr>\r\n	  </thead>\r\n	  <tbody>	  \r\n"
+  return "<div class=\"container\">\r\n<a class='btn-floating waves-effect waves-red modal-trigger pulse red' id='modaluserbutton' href='#modaluser'> <i class=\"fas fa-plus-circle\"></i></a>\r\n	<table class=\"hightlight hide-on-med-and-down tableview\">\r\n	  <thead>\r\n	    <tr>		      \r\n	      <th>NOMBRES</th>\r\n	      <th>CIUDAD</th>\r\n	      <th>SEXO</th>\r\n	      <th>TELEFONO</th>\r\n	      <th>FECHA DE NACIMIENTO</th>\r\n		  <th>DIRECCION</th>\r\n	      <th>PROVINCIA</th>\r\n	      <th>FECHA DE ALTA</th>      \r\n	      <th></th>	      	      \r\n	    </tr>\r\n	  </thead>\r\n	  <tbody>	  \r\n"
     + ((stack1 = helpers.each.call(alias1,depth0,{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\r\n 	  </tbody>\r\n	</table>\r\n	<table class=\"table d-md-none tableview\">\r\n	<tbody class=\"d-md-none\">\r\n"
+    + "\r\n 	  </tbody>\r\n	</table>\r\n	<table class=\"table hide-on-large-only tableview\">\r\n	<tbody class=\"d-md-none\">\r\n"
     + ((stack1 = helpers.each.call(alias1,depth0,{"name":"each","hash":{},"fn":container.program(4, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "	  	</tbody> \r\n	</table>	  	  	\r\n</div>\r\n";
 },"useData":true});

@@ -1,39 +1,38 @@
-<div class="form-group">
+<div class="input-field">
 	<label class="control-label" for="newnombres"><b>Nombre </b></label>
 	<input id="newnombres" type="text" maxlength="50" class="form-control">
 </div>
-<div class="form-group">
+<div class="input-field">
 	<label class="control-label" for="newciudad"><b>Ciudad</b></label>
 	<input id="newciudad"' type="text" maxlength="50" class="form-control">
 </div>
-	<div class="form-group">
-	<label>
-		<input type="radio" name="alternativas" value="M"> <b>Masculino</b>
-	</label>
-	<label>
-		<input type="radio" name="alternativas" value="F"> <b>Femenino</b>
-	</label>
+	<div>	
+		<input type="radio" id='radionew1' name="alternativas" value="M"> 
+		<label for='radionew1'><b>Masculino</b></label>
+	
+		<input type="radio" id='radionew2' name="alternativas" value="F"> 
+	<label for='radionew2'><b>Femenino</b></label>
 </div>
-<div class="form-group">
+<div class="input-field">
 	<label class="control-label" for="newtelefono"><b>Telefono</b></label>
 	<input id="newtelefono" type="text" maxlength="25" class="form-control" length="40"'>
 </div>
-<div class="form-group">
+<div class="input-field">
 	<label class="control-label" for="newfecha"><b>Fecha de nacimiento</b></label>
 	<input id="newfecha" type="text" maxlength="25" class="form-control">
 </div>
-<div class="form-group">
+<div class="input-field">
 	<label class="control-label" for="newdireccion"><b>Direccion</b></label>
 	<input id="newdireccion" type="text" maxlength="25" class="form-control">
 </div>
-<div class="form-group">
+<div class="input-field">
 	<label class="control-label" for="newprovincia"><b>Provincia</b></label>
 	<input id="newprovincia" type="text" maxlength="25" class="form-control">
 </div>
-<div class="form-group">	
+<div class="input-field">	
 	<input id="newfechaalta" type="text" maxlength="25" class="form-control" hidden>
 </div>
-<div class="form-group">
-	<button type='button' id="okcreateuser" value="submit">Crear</button>
-	<input type="reset" id='canceluser' value='Cancelar'>
+<div class="input-field">
+	<button type='button' class='btn waves-effect waves-light' id="okcreateuser" value="submit">Crear</button>
+	<button type='button class='btn waves-effect waves-light' id='canceluser' value='cancelar'>Cancelar</button>
 </div>

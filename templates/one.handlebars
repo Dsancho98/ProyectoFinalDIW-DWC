@@ -1,7 +1,7 @@
 <div class="container">
-<button type='button' data-toggle='modal' data-target='#modaluser' id='modaluserbutton'> <i class="fas fa-plus-circle"></i></button>
-	<table class="table table-responsive d-none d-md-block tableview">
-	  <thead class="thead-dark">
+<a class='btn-floating waves-effect waves-red modal-trigger pulse red' id='modaluserbutton' href='#modaluser'> <i class="fas fa-plus-circle"></i></a>
+	<table class="hightlight hide-on-med-and-down tableview">
+	  <thead>
 	    <tr>		      
 	      <th>NOMBRES</th>
 	      <th>CIUDAD</th>
@@ -26,16 +26,15 @@
 			<td>{{this.direccion}}</td>	
 			<td>{{this.provincia}}</td>	
 			<td>{{convertirFecha this.fecha_alta}}</td>     
-			<td> <i class="fas fa-edit editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i>
-			<i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i>
-			<i class="fas fa-map-marker mapIc" data-toggle='modal' data-target='#modalmap' data-id='{{this.direccion}}'></i></td>		
+			<td> <a class="fas fa-edit editarIc waves-effect waves-light modal-trigger" href='#modaluser' data-id='{{this.id}}'></a>
+			<i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i> <a class="fas fa-map-marker mapIc waves-effect waves-light modal-trigger" href='#modalmap' data-id='{{this.direccion}}'></a></td>	
 		</tr>
 		{{/if}}	
 		{{/each}}	
 
  	  </tbody>
 	</table>
-	<table class="table d-md-none tableview">
+	<table class="table hide-on-large-only tableview">
 	<tbody class="d-md-none">
 			{{#each this}}
 			{{#if this}} 	  		
@@ -72,8 +71,8 @@
 		  	<td>{{convertirFecha this.fecha_alta}}</td>  
 		  </tr>
 		  <tr>
-			<td> <i class="fas fa-edit editarIc" data-toggle='modal' data-target='#modaluser' data-id='{{this.id}}'></i>
-			<i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i> <i class="fas fa-map-marker mapIc" data-toggle='modal' data-target='#modalmap' data-id='{{this.direccion}}'></i></td>			  
+			<td> <a class="fas fa-edit editarIc waves-effect waves-light modal-trigger" href='#modaluser' data-id='{{this.id}}'></a>
+			<i class="fa fa-window-close borrarIc" data-id='{{this.id}}'></i> <a class="fas fa-map-marker mapIc waves-effect waves-light modal-trigger" href='#modalmap' data-id='{{this.direccion}}'></a></td>			  
 		  </tr> 
 		  {{/if}}
 		  {{/each}}

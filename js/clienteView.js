@@ -8,6 +8,7 @@ var clienteview = (function() {
     	} 		
     	
         $('#modalHandle').html(HTML);
+        $('.modal').modal();
 		 botones();  
     }
     function mostrarmapa(direccion){    	
@@ -42,15 +43,15 @@ function botones(){
 	$("#okcreateuser").click(function() {	    
 	    var objeto=recogerValores();
 	    clientelist.addCliente(objeto);
-	     $("#modaluser").modal('hide');
+	    $(".modal").modal('close');
 	});	
 	$("#okmodifyuser").click(function() {	    
 	    var objeto=recogerValores('mod');
 	    clientelist.modCliente(objeto);
-	    $("#modaluser").modal('hide');
+	    $(".modal").modal('close');
 	});		
 	$("#canceluser").click(function(){
-		$("#modaluser").modal('hide');
+		$(".modal").modal('close');
 	});
 }
 function recogerValores(mode='new'){

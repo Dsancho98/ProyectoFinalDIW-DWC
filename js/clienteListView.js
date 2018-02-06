@@ -2,7 +2,8 @@ eventos = events.getInstance();
 var clientelistview = (function() {
     function showClients() {
         var HTML = Handlebars.templates.one(clientelist.clientesarr);
-        $('#handle').html(HTML);    
+        $('#handle').html(HTML);   
+        $('.modal').modal(); 
         botonesModal();  
     }
     return {

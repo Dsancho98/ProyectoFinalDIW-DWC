@@ -6,67 +6,36 @@
     <title>ProyectoFinal</title>
     <script src=lib/jquery-3.2.1.js></script>
     <script src=lib/jquery-ui.min.js></script>
-    <script type="text/javascript" src="lib/bootstrap/popper.min.js"></script>
-    <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+    <!--   <script type="text/javascript" src="lib/bootstrap/popper.min.js"></script> -->
+    <script type="text/javascript" src="lib/materialize/materialize.min.js"></script>
     <script src="handlebars/handlebars.runtime-v4.0.11.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="js/handles/one.js"></script>
     <script src="js/handles/modalnew.js"></script>
     <script src="js/handles/modalmod.js"></script>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="lib/fontawesome/fontawesome-all.css">
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCvYUhwDlOhAeAaoPaEIR1FFFMSmagNeyw"></script>
 </head>
 
 <body>
-    <div class="modal fade" id='modaluser' role='dialog' aria-labelledby="modalusertitle" aria-hidden='true'>
-        <div class="modal-dialog" role='document'>
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id='modalusertitle'>Rellena los campos</h5></div>
-                <div class="panel panel-primary">
-                    <div class="panel-body">
-                        <form method="POST" action="#" role="form">
-                            <div id="modalHandle"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <div class="modal" id='modaluser'>
+        <div class="modal-content">
+            <h5>Rellena los campos</h5>
+            <form method="POST" action="#" role="form">
+                <div id="modalHandle"></div>
+            </form>
         </div>
     </div>
-    <div class="modal fade" id='modalmap' role='dialog' aria-labelledby="modalusertitle2" aria-hidden='true'>
-            <div class="modal-dialog" role='document'>
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id='modalusertitle2'>Mapa</h5></div>
-                    <div class="panel panel-primary">
-                        <div class="panel-body">
-                            <form method="POST" action="#" role="form">
-                                <div id="mapCustomer" style="height:500px;"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-      <!--   <div id="mapCustomer"></div>  -->  
-
-  <!-- <form>
-    Id:
-    <input type="text" id='id'>
-    <br> Nombre:
-    <input type="text" id='nombre'>
-    <br> ciudad:
-    <input type="text" id='ciudad'>
-    <br> sexo:
-    <input type="text" id='sexo'>
-    <br> Telefono:
-    <input type="text" id='tlf'>
-    <br> Fecha:
-    <input type='text' id='fecha'>
-    <br>
-    <span id="nuevocliente">enviar</span>
-</form> -->
+    <div class="modal" id='modalmap'>
+        <div class="modal-content">
+            <h5>Mapa</h5>
+            <form method="POST" action="#" role="form">
+                <div id="mapCustomer" style="height:500px;"></div>
+            </form>
+        </div>
+    </div>
+    </div>
     <div id="handle"></div>
     <script src="js/events.js"></script>
     <script src="js/cliente.js"></script>
@@ -75,7 +44,6 @@
     <script src="js/clienteListView.js"></script>
     <script src="js/main.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvYUhwDlOhAeAaoPaEIR1FFFMSmagNeyw&callback=initMap" async defer></script> -->
-   
 </body>
 
 </html>
